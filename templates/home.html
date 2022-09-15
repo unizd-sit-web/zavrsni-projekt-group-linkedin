@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Programmer LinkedIn</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<!-- Navigacijski dio -->
+
+<body>
+    <div class="topnav">
+        <a class="active" href="home.html">Home</a>
+        <a href="{{ url_for('search') }}">Find programmers</a>
+        <a href="{{ url_for('signUp') }}">Sign up</a>
+    </div>
+    <!-- Kraj navigacije -->
+    <div class="content">
+        <p class="welcome"><b>Welcome!</b></p>
+        <p class="content-start">This is a Website designed to help you find independent programmers for your
+            projects!<br><br>Or if you are a programmer yourself, find freelance work to do!</p>
+    </div>
+    <div class="header-image">
+        <img class="image"
+            src="https://media.istockphoto.com/photos/laptop-computer-desktop-pc-human-hand-office-soft-focus-picture-picture-id811268074?k=20&m=811268074&s=612x612&w=0&h=ZRbtDWXGPi_pZghzHzF4Bzd3DKY8yuzBlWBEwZkHBwQ=">
+    </div>
+    <!-- Footer strainice -->
+    <div class="footer-about">
+        <p class="desc"><b>Easiest way to find local programmers</b></p>
+        <p class="info">You can find our contact info here</p>
+    </div>
+    <div class="footer-contact">
+        <p class="contact"><b>Contact</b></p>
+        <p class="mail">example@mail.com</p>
+    </div>
+    <div class="footer-service">
+        <p class="service-title"><b>Services</b></p>
+        <p class="services"><a href="{{ url_for('signUp') }}">Freelance work</a></p>
+        <p class="services"><a href="{{ url_for('search') }}">Find freelance programmers</a></p>
+    </div>
+    <div class="footer-thanks">
+        <p class="thanks"><b>Thank you for using our service!</b></p>
+    </div>
+    <!-- Kraj footera i pocetak info kartica-->
+    <div class="info-cards">
+        <div class="cards">
+            <h1 class="cards-welcome">We are offerring new ways to find local programmers</h1>
+            <p class="cards-desc">Search for local programmers in the navigation bar</br>
+                Or sign up yourself and find work in no time!</p>
+        </div>
+        <div class="cards">
+            <h1 class="cards-welcome">Search for programmers now!</h1>
+            <p class="cards-desc">Head to the Find Programmers tab to find someone now.</br>
+                Just search your needed language and message them right away.
+            </p>
+        </div>
+        <div class="cards">
+            <h1 class="cards-welcome">Sign up for freelance work.</h1>
+            <p class="cards-desc">Head to the sign up page and fill in the info</br>
+                and wait for a customer to message you.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

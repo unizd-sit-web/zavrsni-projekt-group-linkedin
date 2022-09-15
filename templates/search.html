@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Programmer LinkedIn</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <script src="../static/script.js"></script>
+    </head>
+    <body>
+        <!-- Navigacijski dio -->
+        <div class="topnav">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a class="active" href="search.html">Find programmers</a>
+            <a href="{{ url_for('signUp') }}">Sign up</a>
+        </div>
+        <!-- Navigacijski dio kraj -->
+        <div class="footer-about">
+            <p class="desc"><b>Easiest way to find local programmers</b></p>
+            <p class="info">You can find our contact info here</p>
+        </div>
+        <div class="footer-contact">
+            <p class="contact"><b>Contact</b></p>
+            <p class="mail">example@mail.com</p>
+        </div>
+        <div class="footer-service">
+            <p class="service-title"><b>Services</b></p>
+            <p class="services"><a href = "{{ url_for('signUp') }}">Freelance work</a></p>
+            <p class="services">Find freelance programmers</p>
+        </div>
+        <div class="footer-thanks">
+            <p class="thanks"><b>Thank you for using our service!</b></p>
+        </div>
+        <!-- Footer kraj i search form-->
+        <form role="search" id="form">
+            <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" onkeyup="searchFunct()">
+            <button>
+              <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+            </button>
+          </form>
+          <ul id="myUL">
+            <li><a>Marko</br>marko@gmail.com</br>(Java, C#)</a></li>
+            <li><a>Ivan</br>ivan@yahoo.com</br>(Python, C++)</a></li>
+            <li><a>Ana</br>ana@outlook.com</br>(Java, JavaScript)</a></li>
+          </ul>
+    </body>
+</html>
