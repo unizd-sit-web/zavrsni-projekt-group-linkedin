@@ -1,9 +1,6 @@
-from email import message
-import email
 import sqlite3 as sql
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-from flask_mail import Mail, Message
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
@@ -31,7 +28,11 @@ def home():
 
 @app.route('/search/')
 def search():
-    return render_template("search.html")
+    con = sql.connect("users.db")
+    cur = con.cursor()
+    cur.execute("SELECT * FROM user")
+    data = cur.fetchall()
+    return render_template("search.html", data=data)
 
 @app.route('/signUp/')
 def signUp():
@@ -46,12 +47,5 @@ def confirm():
     usr = User(name, email, lang)
     db.session.add(usr)
     db.session.commit()
-
-    '''msg=Message("Thanks for signing up!", sender=email)
-    msg.add_recipient("petesic.donat@gmail.com")
-    msg.body=('Thank you for signing up for our website!')
-
-    Mail.send(msg)
-    '''
     
     return render_template("confirm.html")
