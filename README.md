@@ -1,1 +1,13 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7418818&assignment_repo_type=AssignmentRepo)
+# Zavrsni projekt grupe LinkedIn
+
+## - Donat Petešić
+
+Stranica koristi Sign Up tab za prijave, sprema ih u bazu podataka, te ih napise u Search tabu.
+
+## Pokretanje aplikacije - Terminal
+
+1. py -m venv venv
+2. source venv/Scripts/activate
+3. pip install -r requirements.txt
+4. export FLASK_APP=app.py
+5. flask run
