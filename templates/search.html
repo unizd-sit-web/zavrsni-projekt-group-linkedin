@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Programmer LinkedIn</title>
-        <link rel="stylesheet" href="../static/style.css">
-        <script src="../static/script.js"></script>
-    </head>
-    <body>
-        <!-- Navigacijski dio -->
-        <div class="topnav">
-            <a href="{{ url_for('home') }}">Home</a>
-            <a class="active">Find programmers</a>
-            <a href="{{ url_for('signUp') }}">Sign up</a>
-        </div>
-        <!-- Navigacijski dio kraj -->
-        <div class="footer-about">
-            <p class="desc"><b>Easiest way to find local programmers</b></p>
-            <p class="info">You can find our contact info here</p>
-        </div>
-        <div class="footer-contact">
-            <p class="contact"><b>Contact</b></p>
-            <p class="mail">example@mail.com</p>
-        </div>
-        <div class="footer-service">
-            <p class="service-title"><b>Services</b></p>
-            <p class="services"><a href = "{{ url_for('signUp') }}">Freelance work</a></p>
-            <p class="services">Find freelance programmers</p>
-        </div>
-        <div class="footer-thanks">
-            <p class="thanks"><b>Thank you for using our service!</b></p>
-        </div>
-        <!-- Footer kraj i search form-->
+{% extends 'base.html' %}
+
+{% block content %}
+
         <form role="search" id="form">
             <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" onkeyup="searchFunct()">
             <button>
@@ -46,3 +17,4 @@
           </ul>
     </body>
 </html>
+{% endblock %}

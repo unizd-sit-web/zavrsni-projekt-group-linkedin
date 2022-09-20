@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="utf-8" />
-    <title>Programmer LinkedIn</title>
-    <link rel="stylesheet" href="../static/style.css">
-</head>
-<!-- Navigacijski dio -->
+{% block content %}
 
-<body>
-    <div class="topnav">
-        <a class="active">Home</a>
-        <a href="{{ url_for('search') }}">Find programmers</a>
-        <a href="{{ url_for('signUp') }}">Sign up</a>
-    </div>
-    <!-- Kraj navigacije -->
     <div class="content">
         <p class="welcome"><b>Welcome!</b></p>
         <p class="content-start">This is a Website designed to help you find independent programmers for your
@@ -44,23 +31,6 @@
             </p>
         </div>
     </div>
-    
-    <!-- Footer strainice -->
-    <div class="footer-about">
-        <p class="desc"><b>Easiest way to find local programmers</b></p>
-        <p class="info">You can find our contact info here</p>
-    </div>
-    <div class="footer-contact">
-        <p class="contact"><b>Contact</b></p>
-        <p class="mail">example@mail.com</p>
-    </div>
-    <div class="footer-service">
-        <p class="service-title"><b>Services</b></p>
-        <p class="services"><a href="{{ url_for('signUp') }}">Freelance work</a></p>
-        <p class="services"><a href="{{ url_for('search') }}">Find freelance programmers</a></p>
-    </div>
-    <div class="footer-thanks">
-        <p class="thanks"><b>Thank you for using our service!</b></p>
-    </div>
 </body>
 </html>
+{% endblock %}
